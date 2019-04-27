@@ -80,7 +80,7 @@ patch_dockerfile() {
 fetch_sources
 init_qemu
 
-#echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 patch_dockerfile Dockerfile Dockerfile.arm arm32v7 arm arm
 build_and_push_images arm ./Dockerfile.arm
