@@ -3,9 +3,11 @@ env:
     secure: xFv+xolBuyGbQGPbXi68scD6dseWwZC9vLlUVB4YbiaQBnuduoSoL+gWQCLiz72VJMPzHJNqsCI7145qYiu33TI76pkabL5eNjdg4BwH/8IZuALoBkTfhw5LfTLriArIl5tMj7UUKga7WJKXex3+7N5gJLdNNtA6w+RVcChVCnBtnD0RYUcdl3Ag4dEi9XYYLN8P8CC0IHYoE4jEQSPkOv+8L0K2Mq+6KwUYUBSXIVyMeLlWr5AQ/WLMQzRaKIO7pk8rOuPaX2sG3VbIDG0bG5E5ksAQzJpkwqV5aDXQ5jCaQpI4yeUKcf2VW8BmajnUrA4pXXkE/LqIi1J/AJ9ltE2un38cTa0Sgi5Nci4xGatb3RhsaIS4KBFWn2w/ycnKzbAW3u5L8nUS25V5+IMEdsZlSudqotDOBvs3Z5vjZP/dg75pz/B6qb8lGqDjtctR0o8x6POIyj+76i/WTWiNZAZ7PeRYRQ0Hxsk0vN3KVQAPJ77oNolqH86SL/0GfNx4FdxVt6gIyZ+w2c+wV6ILHPGYBsjx4M4KK1vlCwwYElydtSWl7U5lUzGmEw/U3h5EDZzcwL7b6bYjqOZLmj8w7uPajTgiOlDrCsWQ0hlM/yCn5UFZhRPbwgNLoBPe7737pY3TBtEGWxtbuL/bhJrvY/J+vgJ4rwq3baZF6rhmub0=
 
 sudo: required
+
 services:
 - docker
+
 dist: xenial
 language: bash
 script:
-- "./build.sh"
+- travis_wait 60 "./build.sh"
