@@ -10,4 +10,4 @@ services:
 dist: xenial
 language: bash
 script:
-- travis_wait 60 ./build.sh
+- ./build.sh
