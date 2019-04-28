@@ -75,7 +75,7 @@ patch_dockerfile() {
     local k8s_arch=$5
 
     sed "s#\(FROM \)\(node:.*\)#\1${docker_arch}/\2\n\nCOPY qemu-${qemu_arch}-static /usr/bin/\n#" ${dockerfile_orig} > ${dockerfile_dest}
-    sed -i "s#yarn#yarn --verbose#g" ${dockerfile_dest}
+    sed -i "s#yarn #yarn --verbose #g" ${dockerfile_dest}
 }
 
 fetch_sources
