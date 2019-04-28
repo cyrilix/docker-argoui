@@ -9,4 +9,4 @@ jobs:
       - setup_remote_docker
       - run:
           name: build images
-          command: ls
+          command: /bin/sh build.sh
