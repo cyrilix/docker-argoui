@@ -1,8 +1,8 @@
 #! /bin/bash
 
 IMG_NAME=cyrilix/argoui
-VERSION=2.2.0
-MAJOR_VERSION=2.2
+VERSION=2.3.0
+MAJOR_VERSION=2.3
 export DOCKER_CLI_EXPERIMENTAL=enabled
 export DOCKER_USERNAME=cyrilix
 
